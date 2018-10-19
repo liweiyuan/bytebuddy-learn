@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 /**
  * @Author :lwy
  * @Date : 2018/10/19 15:42
- * @Description :
+ * @Description : 获取异常处理  @Advice.OnMethodExit(onThrowable = Throwable.class)
  */
 public class StaticMethodInterceptor{
 

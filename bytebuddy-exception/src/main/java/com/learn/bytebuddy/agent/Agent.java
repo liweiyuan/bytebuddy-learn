@@ -1,6 +1,8 @@
 package com.learn.bytebuddy.agent;
 
+import com.learn.bytebuddy.interceptor.ConstructorInterceptor;
 import com.learn.bytebuddy.interceptor.StaticMethodInterceptor;
+import com.learn.bytebuddy.interceptor.TwoArgumentsMethodInterceptor;
 import net.bytebuddy.agent.builder.AgentBuilder;
 import net.bytebuddy.asm.Advice;
 import net.bytebuddy.description.type.TypeDescription;
@@ -30,8 +32,15 @@ public class Agent {
                 System.out.println("the className: " + className);
 
                 //方法参数长度为1的任何方法
-                builder=builder.method(ElementMatchers.named("setName").and(ElementMatchers.takesArguments(1)))
-                        .intercept(Advice.to(StaticMethodInterceptor.class));
+                //builder=builder.method(ElementMatchers.named("setName").and(ElementMatchers.takesArguments(1)))
+                //       .intercept(Advice.to(StaticMethodInterceptor.class));
+
+                //获取属性值
+                //builder=builder.method(ElementMatchers.takesArguments(2))
+                //       .intercept(Advice.to(TwoArgumentsMethodInterceptor.class));
+
+                //拦截构造方法，不可获取非static的属性
+                builder = builder.visit(Advice.to(ConstructorInterceptor.class).on(ElementMatchers.isConstructor()));
                 return builder;
             }
         };

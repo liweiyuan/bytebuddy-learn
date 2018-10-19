@@ -11,6 +11,7 @@ public class App {
 
 
         Hello hello=new Hello();
-        hello.setName("wade");
+        //hello.setName("wade");
+        hello.getHello("wade","bosh");
     }
 }

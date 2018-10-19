@@ -7,12 +7,17 @@ package com.learn.bytebuddy.sample;
  */
 public class Hello {
 
-    private String name;
+    private String name = "name";
 
     public Hello() {
     }
 
-    public void setName(String name){
-        this.name=name;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getHello(String hello, String world) {
+        this.name = hello + ":" + world;
+        return hello + world;
     }
 }
