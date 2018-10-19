@@ -9,6 +9,7 @@
         <module name="bytebuddy-class" />
         <module name="bytebuddy-common" />
         <module name="bytebuddy-constructors" />
+        <module name="bytebuddy-costtime" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

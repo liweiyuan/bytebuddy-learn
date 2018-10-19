@@ -12,6 +12,7 @@
         <module>bytebuddy-class</module>
         <module>bytebuddy-common</module>
         <module>bytebuddy-constructors</module>
+        <module>bytebuddy-costtime</module>
         <!--<module>bytebuddy-constructor</module>-->
     </modules>
 </project>
