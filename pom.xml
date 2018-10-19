@@ -13,6 +13,7 @@
         <module>bytebuddy-common</module>
         <module>bytebuddy-constructors</module>
         <module>bytebuddy-costtime</module>
+        <module>bytebuddy-exception</module>
         <!--<module>bytebuddy-constructor</module>-->
     </modules>
 </project>

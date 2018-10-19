@@ -10,6 +10,7 @@
         <module name="bytebuddy-common" />
         <module name="bytebuddy-constructors" />
         <module name="bytebuddy-costtime" />
+        <module name="bytebuddy-exception" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
